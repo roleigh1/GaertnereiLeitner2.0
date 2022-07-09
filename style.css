@@ -164,6 +164,7 @@ p {
     #555555 ;
    width: 30%;
    height:20%;
+   Opacity:0.5;
 
 }
 #what{
@@ -183,7 +184,7 @@ p {
     margin: auto; 
     color: rgb(0, 0, 0);
     height: 0%;
-    width:10%; 
+    width:30%; 
     padding-top: 10%;
 }   
 
