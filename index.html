@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,9 +21,9 @@
          <img class="logo" src="logo_small.png" alt="logo"> 
 
         <div class="menu">
-            <a href="#" class="is-active">Über uns</a>
+            <a href="index.html" class="is-active">Über uns</a>
             <a href="standorte.html">Standorte</a>
-            <a href="#">Kontakt</a>
+            <a href="kontakt.html">Kontakt</a>
         </div>
 
          <button class="hamburger">
@@ -34,13 +35,20 @@
    </nav>
 </header>
 
-      <hr>
-     <div id="headline">
-         
-      </div>
+     
        <div id="content">
           <h1>Willkommen bei der Gärtnerei Leitner</h1>
-           <img id="field"  src="work.jpg" alt="field work"> 
+          
+           <img id="myImg"  src="work.jpg" alt="field work" style=" width: 20%; height:20%;"> 
+           <!-- The Modal-->
+             <div id="myModal" class="modal">
+                <!--The Close Button -->
+                <span class="close">&times;</span>
+                <!-- Modal Content (The image)-->
+                <img class="modal-content" id="img01">
+                <!-- Modal Caption (Image Text)-->
+                <div id="caption"></div>
+              </div>
             <p id="text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
               sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
             sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
@@ -66,5 +74,29 @@
 
 </main>
 <script src="main.js"></script>
+<script>
+  // Get the modal 
+var modal = document.getElementById("myModal"); 
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption 
+let img = document.getElementById("myImg"); 
+let modalImg = document.getElementById("img01");
+let captionText = document.getElementById("caption"); 
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src; 
+    captionText.innerHtml = this.alt;
+    
+}
+// Get the <span: element that closes the modal 
+let span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), closes the modal
+span.onclick = function(){
+    modal.style.display="none"; 
+}
+
+</script>
 </body>
 </html>
